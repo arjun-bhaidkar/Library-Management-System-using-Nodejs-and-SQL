@@ -1,7 +1,8 @@
 # CRUD-nodejs-mysql
 
 Description:
-CRUD-nodejs-mysql demonstrates the CRUD operation on mysql database using node.js
+CRUD-nodejs-mysql demonstrates the CRUD operation on mysql database using node.js.
+It is a fully responsive.
 
 Technologies used:
 
@@ -12,6 +13,8 @@ Express.js
 MySQL database
 
 Ejs.js view engine
+
+Materialize Css
 
 ## SCREENSHOT
 
