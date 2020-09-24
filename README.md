@@ -9,6 +9,7 @@ Node.js
 
 Express.js
 
+MySQL database
 
 Ejs.js view engine
 
