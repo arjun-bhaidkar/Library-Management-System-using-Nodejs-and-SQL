@@ -1,0 +1,49 @@
+<%- include('./partials/header') %>
+        <div class="container center">
+            <div class="white form card row">
+                <form method="post" class="col s12">
+                    <h5>Edit book details</h5>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input 
+                                type='text' 
+                                placeholder="Book name" 
+                                name='Name' 
+                                value="<%=books.Name%>" 
+                                minlength="3"
+                                required/>
+                            <label>Book Name </label>
+                        </div>
+
+                        <div  class="input-field col s12">
+                            <input 
+                                type='text' 
+                                placeholder="Author name" 
+                                name='Author' 
+                                value="<%=books.Author%>" 
+                                minlength="3"
+                                required/>
+                            <label>Author name </label>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <input 
+                                type='number' 
+                                placeholder="Price" 
+                                name='Price' 
+                                value="<%=books.Price%>" 
+                                min="100"
+                                required/>
+                            <label>Price </label>
+                        </div>
+                    </div>
+                    <button type='submit' class="btn-small margin-1 round-border">Save
+                        <i class="material-icons right" style="font-size: 1rem; margin-left: 0.5rem;">send</i>
+                    </button>
+                    <a class="btn-small red margin-1 round-border" href="/">Cancle
+                        <i class="material-icons right" style="font-size: 1rem; margin-left: 0.5rem;">clear</i>
+                    </a>
+                </form>
+            </div>
+        </div>
+<%- include('./partials/footer') %>

@@ -1,0 +1,52 @@
+<%- include('./partials/header') %>
+        <div class="container">
+            <div class="">
+                <% if (books.length > 0) { %>
+                    <div style="display: flex; justify-content: space-between;margin-bottom: 0.5rem;">
+                        <h6 class="grey-text">Total number of books: <span class="blue-text"><%=books.length%></span></h6>
+                        <a class="btn-small red round-border" href="books/delete">Delete All</a>
+                    </div>
+                    <table class="highlight white card">
+                        <thead>
+                            <tr>
+                                <th>Book Name</th>
+                                <th>Author</th>
+                                <th>Price(Rupees)</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% books.forEach((book, index) => { %>
+                                <tr>
+                                    <td><%= book.Name%></td>
+                                    <td><%= book.Author%></td>
+                                    <td><%= book.Price%></td>
+                                    <td><a class="btn-floating btn-small waves-effect waves-light blue" href='books/edit/<%=book.Id%>'>
+                                            <i class="material-icons">edit</i>
+                                        </a>
+                                    </td>
+                                    <td><a class="btn-floating btn-small waves-effect waves-light red" href='books/delete/<%=book.Id%>'>     
+                                            <i class="material-icons">delete</i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            <%})%>
+                        </tbody>
+                    </table>
+                <% } else { %>
+                    <div class="center" style="display: flex; flex-direction: column;">
+                        <i class="material-icons" style="font-size: 20rem; color: #e0e0e0;">book</i>
+                        <h4 class="" style="color: #424242;">Library is Empty!</h4>                        
+                        <h6 style="color: #424242;">
+                            To add a book 
+                            <a  href="/books/add" 
+                                class="btn-small light-blue lighten-1" 
+                                style="border-radius: 2rem;">
+                                Click Me
+                            </a>
+                        </h6>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+<%- include('./partials/footer') %>
