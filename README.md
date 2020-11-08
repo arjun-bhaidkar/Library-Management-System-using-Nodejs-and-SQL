@@ -1,7 +1,7 @@
-# CRUD-nodejs-mysql
+# Library Management System using Nodejs and SQL 
 
 Description:
-CRUD-nodejs-mysql demonstrates the CRUD operation on mysql database using node.js.
+Library Management System demonstrates the CRUD operation on mysql database using node.js.
 It is fully responsive.
 
 Technologies used:
